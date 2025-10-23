@@ -103,26 +103,26 @@
     <div class="mt-5">
       <h3 class="text-center mb-4">¿Qué te pareció tu visita al zoológico?</h3>
       
-      <form action="/enviar-opinion" method="POST">
+      <form action="{{ url('/guardarInformacion') }}" method="POST">
         @csrf
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre:</label>
-          <input type="text" class="form-control" id="nombre" name="nombre">
+          <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
         </div>
 
         <div class="mb-3">
           <label class="form-label">¿Te gustó el zoológico?</label>
           <select class="form-select" name="opinion" required>
             <option value="">Elige una opción</option>
-            <option value="mucho">Me gustó mucho</option>
-            <option value="normal">Normal</option>
-            <option value="poco">Me gustó poco</option>
+            <option value="1">Me gustó mucho</option>
+            <option value="2">Normal</option>
+            <option value="3">No me gustó</option>
           </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="comentario" class="form-label">Déjanos un comentario:</label>
-          <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
         </div>
 
         <div class="text-center">
