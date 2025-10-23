@@ -118,4 +118,3 @@
       científica orientada a jóvenes y visitantes.</p>
   </main>
 @endsection
-@endsection

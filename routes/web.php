@@ -22,6 +22,3 @@ Route::get('/formulario', function () {
     return view('formulario');
 })->name('formulario');
 
-Route::post('/formulario', function () {
-    return redirect()->back()->with('success', 'Formulario enviado correctamente');
-})->name('formulario.store');
